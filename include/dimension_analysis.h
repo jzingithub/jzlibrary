@@ -103,7 +103,7 @@ namespace jz
     template <typename T1,
               typename T2,
               typename MetaFunc>
-              struct DimensionTransform {};
+    struct DimensionTransform {};
 
     template <template <typename ValueType, ValueType... Args1> typename T1,
               template <typename ValueType, ValueType... Args2> typename T2,
