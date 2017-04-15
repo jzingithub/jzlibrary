@@ -10,7 +10,7 @@
 namespace jz
 {
     // dimension analysis by template metaprogramming
-    // Syst��me International d'Unit��s(SI) contains seven base units
+    // The International System of Units contains seven base units
     // 1.mass
     // 2.length
     // 3.time
