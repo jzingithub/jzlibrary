@@ -7,7 +7,8 @@
     // public:
     //     // ...
     // };
-
+    
+    // void OutOfMemory();
     // Widget::SetNewHandler(&OutOfMemory);
     // Widget* pw = new Widget;
     // std::string* ps = new std::string;
