@@ -1,10 +1,10 @@
-// Author: jz
+// author: jz
 // This header has various uses.
 #pragma once
 
 namespace jz
 {
-    // class inheriting from jz::Uncopyable cannot be copied.
+    // class derived from jz::Uncopyable cannot be copied.
     class Uncopyable
     {
     protected:

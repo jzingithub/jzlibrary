@@ -1,11 +1,15 @@
 #pragma once
 
-// example:
-// Quantity<float, length> len1(10.23f);
-// Quantity<float, length> len2(5.0f);
-// Quantity<float, mass> mass1(2.3f);
-// cout << (len1 + len2).Value() << endl;
-// cout << (len1 + mass1).Value() << endl; // compile error!
+/****
+    author: jz
+    example:
+
+    Quantity<float, length> len1(10.23f);
+    Quantity<float, length> len2(5.0f);
+    Quantity<float, mass> mass1(2.3f);
+    cout << (len1 + len2).Value() << endl;
+    cout << (len1 + mass1).Value() << endl; // compile error!
+****/
 
 namespace jz
 {
@@ -116,9 +120,10 @@ namespace jz
                               MetaFunc>
     {
         using Type =
-            DimensionVector<ValueType, MetaFunc::template Apply<ValueType,
-            Args1,
-            Args2>::value...>;
+            DimensionVector<ValueType,
+                            MetaFunc::template Apply<ValueType,
+                                                     Args1,
+                                                     Args2>::value...>;
     };
 
     // multiplication and division between dimensions generate new dimension
@@ -126,9 +131,10 @@ namespace jz
     template <typename T,
               typename Dimension1,
               typename Dimension2>
-    Quantity<T, typename DimensionTransform<Dimension1,
-                                            Dimension2,
-                                            DimensionPlus>::Type>
+    Quantity<T,
+             typename DimensionTransform<Dimension1,
+                                         Dimension2,
+                                         DimensionPlus>::Type>
     operator*(const Quantity<T, Dimension1>& lhs,
               const Quantity<T, Dimension2>& rhs)
     {
@@ -141,9 +147,10 @@ namespace jz
     template <typename T,
               typename Dimension1,
               typename Dimension2>
-    Quantity<T, typename DimensionTransform<Dimension1,
-                                            Dimension2,
-                                            DimensionMinus>::Type>
+    Quantity<T,
+             typename DimensionTransform<Dimension1,
+                                         Dimension2,
+                                         DimensionMinus>::Type>
     operator/(const Quantity<T, Dimension1>& lhs,
               const Quantity<T, Dimension2>& rhs)
     {
