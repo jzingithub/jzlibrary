@@ -1,5 +1,6 @@
 // author: jz
 // This header has various uses.
+
 #pragma once
 
 namespace jz
