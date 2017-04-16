@@ -1,5 +1,3 @@
-#pragma once
-
 /****
     author: jz
     example:
@@ -10,6 +8,8 @@
     cout << (len1 + len2).Value() << endl;
     cout << (len1 + mass1).Value() << endl; // compile error!
 ****/
+
+#pragma once
 
 namespace jz
 {
