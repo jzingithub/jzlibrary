@@ -1,5 +1,3 @@
-#pragma once
-
 /****
     author: jz
     example:
@@ -17,6 +15,8 @@
     // Widget::SetNewHandler(&OutOfMemory);
     // Widget* pw2 = new Widget;
 ****/
+
+#pragma once
 
 namespace jz
 {
